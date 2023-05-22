@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+* {
+  scroll-behavior: smooth;
+}
+
+.container {
+  @apply max-w-[100%]  m-auto md:px-10 px-5;
+}
+
+.sideCircleNav {
+  @apply rounded-md shadow-md bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300  dark:text-black;
+}
+
+.mobileNavList {
+  @apply w-[40%] flex justify-center items-center rounded-md shadow-md bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-500  hover:bg-[#999] hover:text-white  dark:text-black;
+}
+
+.icon {
+  @apply md:text-[80px] text-[60px] shadow-md cursor-pointer;
+}
+
+/* define the animation keyframes */
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* add the animation class */
+.animate-slide-in {
+  animation: slide-in 0.5s forwards;
+}
+@layer base {
+  body {
+    @apply font-[Poppins];
+  }
+}
+
+/* dark:bg-[#3B3141] dark:text-[#F0ECE6]; */
